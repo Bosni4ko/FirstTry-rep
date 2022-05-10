@@ -7,10 +7,30 @@ public class Task1
         Scanner sc = new Scanner(System.in);
 
         System.out.println("Please enter 2 numbers: ");
-        System.out.println("Enter value a");
-        int a = sc.nextInt();
-        System.out.println("Enter value b");
-        int b = sc.nextInt();
+        String input;
+        int a,b;
+        while (true) {
+            System.out.println("Enter value a");
+            input = sc.next();
+            try {
+                a = Integer.parseInt(input);
+                break;
+            }
+            catch (NumberFormatException e){
+                System.out.println("Incorrect input");
+            }
+        }
+        while (true) {
+            System.out.println("Enter value b");
+            input = sc.next();
+            try {
+                b = Integer.parseInt(input);
+                break;
+            }
+            catch (NumberFormatException e){
+                System.out.println("Incorrect input");
+            }
+        }
 
         System.out.println("Is "+ a +" equal to "+ b + " ? " + " - " + (a == b));
         System.out.println("Is "+ a +" less than "+ b + " ? "+ " - " + (a < b));
